@@ -1,5 +1,5 @@
 1. 📄 README.md
-O arquivo README.md deve conter:
+
 
 Objetivo e Escopo Desenvolver um sistema web para gerenciamento de tarefas com autenticação, painel Kanban, comentários e testes automatizados, focado em equipes de logística.
 
