@@ -1,93 +1,86 @@
-# 🚀 AgileTaskFlow
+1. 📄 README.md
+O arquivo README.md deve conter:
 
-AgileTaskFlow é um sistema de gerenciamento de tarefas desenvolvido pela **TechFlow Solutions**, como parte de uma simulação acadêmica voltada para o ensino de Engenharia de Software. O projeto tem como finalidade atender às demandas de uma startup de logística que precisa acompanhar seu fluxo de trabalho em tempo real, priorizar tarefas críticas e monitorar o desempenho da equipe com eficiência.
+Objetivo e Escopo Desenvolver um sistema web para gerenciamento de tarefas com autenticação, painel Kanban, comentários e testes automatizados, focado em equipes de logística.
 
----
+Metodologia Adotada Aplicação da metodologia ágil Kanban com o uso da aba Projects do GitHub.
 
-## 🎯 Objetivo e Escopo
+Instruções para Execução Clonar repositório, instalar dependências, iniciar sistema com npm start, e rodar testes com npm test.
 
-**Objetivo Geral**: Construir um sistema web que permita o gerenciamento de tarefas com foco em metodologias ágeis.
+Justificativa de Mudança no Escopo Comentários em tarefas foram incluídos após feedback do cliente para facilitar a comunicação interna. Essa alteração foi registrada no Kanban e no README.
 
-**Escopo do Projeto**:
-- Autenticação de usuários
-- CRUD de tarefas (criar, listar, editar, excluir)
-- Organização de tarefas por status: A Fazer, Em Progresso, Concluído
-- Comentários internos nas tarefas para facilitar a comunicação da equipe
-- Painel visual estilo Kanban
-- Testes automatizados integrados ao fluxo de desenvolvimento
+2. 💻 Código Fonte
+Organização dos arquivos em pastas:
 
----
-
-## 📚 Metodologia Adotada
-
-O projeto foi desenvolvido utilizando a metodologia ágil **Kanban**, aplicada por meio das funcionalidades do **GitHub Projects**, com foco em:
-
-- Visualização contínua do progresso
-- Tarefas organizadas em colunas: *A Fazer*, *Em Progresso*, *Concluído*
-- Ajustes dinâmicos conforme evolução do projeto
-- Planejamentos curtos simulados com revisões periódicas
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- **JavaScript Vanilla** (sem frameworks)
-- **HTML/CSS**
-- **Node.js e NPM**
-- **Jest** para testes automatizados
-- **GitHub Actions** para integração contínua (CI)
-- **GitHub Projects** para gerenciamento de tarefas
-- **Git e GitHub** para versionamento de código
-
----
-
-## 📁 Estrutura do Projeto
-
-```plaintext
+plaintext
 AgileTaskFlow/
 ├── README.md
 ├── package.json
-├── /src
-│   ├── index.js          # Entrada principal
-│   ├── auth.js           # Lógica de login/registro
-│   ├── tasks.js          # CRUD de tarefas
-│   └── comments.js       # Gerenciamento de comentários (mudança de escopo)
-├── /public
-│   └── index.html        # Interface básica
-├── /tests
-│   └── tasks.test.js     # Testes unitários com Jest
-├── .github/
-│   └── workflows/
-│       └── test.yml      # Pipeline CI com GitHub Actions
+├── /public            # Contém index.html e arquivos da interface
+├── /src               # Arquivos JS com funcionalidades (login, tarefas, comentários)
+├── /tests             # Arquivos com testes unitários usando Jest
+├── /docs              # Imagens ou exportações da modelagem UML (opcional)
+├── .github/workflows/ # Pipeline de testes com GitHub Actions
+Cada arquivo possui comentários explicativos e nome claro para facilitar a manutenção.
 
-🧪 Instruções para Execução do Sistema
-1. Clonar o projeto
-bash
-git clone https://github.com/seu-usuario/agile-task-flow.git
-cd agile-task-flow
-2. Instalar dependências
-bash
-npm install
-3. Executar aplicação
-bash
-npm start
-4. Executar testes
-bash
-npm test
-O sistema pode ser acessado via navegador local após a execução, e os dados são armazenados temporariamente no localStorage (para fins educativos).
+3. 🗂️ Quadro Kanban
+Configurado na aba Projects do GitHub com colunas:
 
-🔁 Justificativa para Mudanças no Escopo
-Durante a fase de desenvolvimento, foi realizada uma simulação de reunião com o cliente. Como resultado, surgiu a necessidade de incorporar uma nova funcionalidade: comentários internos em tarefas.
+Coluna	Conteúdo
+A Fazer	Tarefas planejadas (ex.: implementar login)
+Em Progresso	Tarefas em desenvolvimento (ex.: configurar CI)
+Concluído	Tarefas entregues (ex.: README finalizado)
+Todos os cartões possuem descrições e são atualizados conforme o avanço do projeto.
 
-Essa mudança foi solicitada para permitir uma melhor comunicação entre os membros da equipe, especialmente em tarefas complexas ou críticas, facilitando revisões e tomada de decisões colaborativas.
+4. 🕓 Histórico de Commits
+Mensagens claras e bem distribuídas, exemplos:
 
-O escopo foi expandido, o README foi atualizado e o quadro Kanban no GitHub Projects recebeu uma nova tarefa para implementar esse recurso adicional.
+feat: implementar login de usuário
 
-📜 Histórico de Versões
-Todos os commits seguem boas práticas de descrição clara e concisa:
+fix: ajustar validação de campos obrigatórios
 
-feat: implementar criação de tarefa
+test: adicionar teste unitário para criação de tarefas
 
-fix: corrigir validação de login
+docs: justificar mudança de escopo no README
 
-chore: configurar pipeline de testes
+O histórico mostra evolução lógica do sistema e facilita acompanhamento.
+
+5. ✅ Pipeline de Controle de Qualidade
+Arquivo criado: .github/workflows/test.yml
+
+Executa testes automatizados com Jest a cada push ou pull request
+
+Logs ficam disponíveis na aba Actions do GitHub
+
+Garante confiabilidade e rastreabilidade do código
+
+6. 📐 Modelagem de Requisitos e UML
+Requisitos Funcionais:
+
+Login
+
+CRUD de tarefas
+
+Comentários nas tarefas
+
+Visualização em Kanban
+
+Requisitos Não Funcionais:
+
+Código modular e comentado
+
+Testes automatizados
+
+Interface leve e intuitiva
+
+Diagramas UML (draw.io):
+
+Casos de Uso: Atores, funcionalidades principais
+
+Classes: Usuário, Tarefa, Comentário com atributos e métodos
+
+7. 🔁 Simulação de Mudança no Escopo
+Comentário adicionado no README.md:
+
+Novo cartão no quadro Kanban: Implementar funcionalidade de comentários nas tarefas incluído na coluna A Fazer → Em Progresso → Concluído
+
